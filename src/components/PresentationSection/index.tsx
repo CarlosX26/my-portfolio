@@ -1,13 +1,33 @@
+import { useEffect, useRef, useState } from "react";
 import { CgArrowLongDown } from "react-icons/cg";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import lottie from "lottie-web";
 
 import { ContainerStyled } from "../../styles/container";
 import { HeadingStyledTwo, TextStyledOne } from "../../styles/typography";
 import { PresentationSectionStyled } from "./styles";
 import profileImg from "../../assets/img/profile.jpg";
 import bgVideo from "../../assets/video/bg-video.mp4";
+import { ChatBot } from "../ChatBot";
 
 export const PresentationSection = () => {
+  const refAnimation = useRef<HTMLDivElement | null>(null);
+  const [chatOn, setChatOn] = useState(false);
+
+  const showChat = () => {
+    setChatOn((prevState) => !prevState);
+  };
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: refAnimation.current!,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../../assets/76723-robot-wave.json"),
+    });
+  }, []);
+
   return (
     <PresentationSectionStyled>
       <ContainerStyled>
@@ -49,7 +69,18 @@ export const PresentationSection = () => {
           </motion.div>
           <TextStyledOne>Scroll</TextStyledOne>
         </motion.a>
+
+        <div id="robot" onClick={showChat}>
+          <div ref={refAnimation}></div>
+
+          <TextStyledOne>Olá, bem vindo</TextStyledOne>
+        </div>
+
+        <AnimatePresence>
+          {chatOn && <ChatBot showChat={showChat} />}
+        </AnimatePresence>
       </ContainerStyled>
+
       <video src={bgVideo} autoPlay muted loop playsInline />
     </PresentationSectionStyled>
   );

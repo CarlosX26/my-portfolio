@@ -79,4 +79,26 @@ export const PresentationSectionStyled = styled.section`
     left: 50%;
     transform: translateX(-50%);
   }
+
+  #robot {
+    position: fixed;
+    bottom: 32px;
+    right: 64px;
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+  }
+  #robot > p {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -56px;
+    background: #fff;
+    color: var(--color-gray-3);
+    padding: 4px;
+    border-radius: 8px;
+  }
+  #robot:hover > p {
+    display: inline-block;
+  }
 `;
