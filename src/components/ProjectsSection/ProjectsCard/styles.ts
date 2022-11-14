@@ -43,4 +43,22 @@ export const ProjectCardStyled = styled.li`
 
     text-decoration: underline;
   }
+  @media (max-width: 868px) {
+    & > video {
+      height: 424px;
+    }
+  }
+  @media (max-width: 668px) {
+    & > video {
+      height: 320px;
+    }
+  }
+  @media (max-width: 468px) {
+    & > video {
+      height: 224px;
+      border-radius: 0px 0px
+        ${({ left }: iPropsProjectCardStyled) =>
+          left ? "0px 128px" : "128px 0px"};
+    }
+  }
 `;

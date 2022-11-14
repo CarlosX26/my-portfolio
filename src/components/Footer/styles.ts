@@ -67,4 +67,15 @@ export const FooterStyled = styled.footer`
     color: var(--color-gray-1);
     cursor: pointer;
   }
+
+  @media (max-width: 868px) {
+    & > div {
+      flex-direction: column;
+      align-items: stretch;
+      padding-bottom: 16px;
+    }
+    .box-info > img {
+      display: none;
+    }
+  }
 `;
