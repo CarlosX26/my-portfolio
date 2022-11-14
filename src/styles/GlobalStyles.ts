@@ -54,8 +54,10 @@ html::-webkit-scrollbar-thumb:active {
 }
 html::-webkit-scrollbar-track {
     background: var(--color-gray-3);
-    
-    
+}
+body{
+    width:100%;
+    overflow-x: hidden;
 }
 
 img{
