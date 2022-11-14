@@ -83,7 +83,8 @@ export const PresentationSectionStyled = styled.section`
   #robot {
     position: fixed;
     bottom: 32px;
-    right: 64px;
+    left: 95%;
+    transform: translateX(-95%);
     width: 128px;
     height: 128px;
     cursor: pointer;
@@ -100,5 +101,33 @@ export const PresentationSectionStyled = styled.section`
   }
   #robot:hover > p {
     display: inline-block;
+  }
+
+  @media (max-width: 868px) {
+    & > div {
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 72px;
+      padding-bottom: 32px;
+    }
+    & > div > .box-text {
+      gap: 16px;
+    }
+    & > div > .box-text > h1 {
+      font-size: 64px;
+    }
+  }
+  @media (max-width: 668px) {
+    & > div > .box-text > h1 {
+      font-size: 48px;
+    }
+  }
+  @media (max-width: 468px) {
+    & > div > .box-text > h2 {
+      font-size: 16px;
+    }
+    & > div > .box-text > h1 {
+      font-size: 40px;
+    }
   }
 `;

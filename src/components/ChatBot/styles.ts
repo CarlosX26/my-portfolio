@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ChatBotStyled = styled(motion.div)`
   position: fixed;
   bottom: 0;
-  right: 64px;
+  right: 5%;
   width: 320px;
   height: 400px;
   display: flex;
@@ -49,13 +49,13 @@ export const ChatBotStyled = styled(motion.div)`
   .body-chat {
     height: 280px;
     padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: scroll;
   }
-  .body-chat > p {
-    height: 32px;
-    background: var(--color-brand-1);
-    border-radius: 8px;
-    color: var(--color-gray-1);
-    padding: 6px 0 0 8px;
+  .body-chat::-webkit-scrollbar {
+    width: 0;
   }
   .footer-chat {
     display: flex;
@@ -81,5 +81,10 @@ export const ChatBotStyled = styled(motion.div)`
   }
   .footer-chat > button > svg {
     font-size: 24px;
+  }
+
+  @media (max-width: 468px) {
+    right: 0%;
+    width: 100%;
   }
 `;
