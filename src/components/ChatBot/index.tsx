@@ -1,12 +1,33 @@
 import { IoIosArrowDown } from "react-icons/io";
 import { BiSend } from "react-icons/bi";
-import { iPropsChatBot } from "./types";
+import { useForm } from "react-hook-form";
+
+import { ChatBubble } from "./ChatBubble";
+import { useBotBrainContext } from "../../contexts/BotBrainContext";
+
+import { iFormChatBot, iPropsChatBot } from "./types";
 
 import { ChatBotStyled } from "./styles";
 import { TextStyledOne } from "../../styles/typography";
 import profileImg from "../../assets/img/chatbot.png";
 
 export const ChatBot = ({ showChat }: iPropsChatBot) => {
+  const { botDecisions, messages } = useBotBrainContext();
+
+  const { register, handleSubmit, reset } = useForm<iFormChatBot>();
+
+  const onSubmit = ({ message }: iFormChatBot) => {
+    const userMessage = {
+      message: message,
+      from: "user",
+      type: "default",
+    };
+
+    botDecisions(userMessage);
+
+    reset();
+  };
+
   return (
     <ChatBotStyled
       initial={{ y: "100%" }}
@@ -26,12 +47,20 @@ export const ChatBot = ({ showChat }: iPropsChatBot) => {
       </div>
 
       <div className="body-chat">
-        <p>Estamos em desenvolvimento. :(</p>
+        {messages.map((el, index) => (
+          <ChatBubble
+            key={index}
+            message={el.message}
+            from={el.from}
+            type={el.type}
+            reference={el.reference}
+          />
+        ))}
       </div>
 
-      <form className="footer-chat">
-        <input type="text" placeholder="Mensagem" />
-        <button disabled>
+      <form onSubmit={handleSubmit(onSubmit)} className="footer-chat">
+        <input type="text" placeholder="Mensagem" {...register("message")} />
+        <button>
           <BiSend />
         </button>
       </form>
