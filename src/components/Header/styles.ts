@@ -41,9 +41,4 @@ export const HeaderStyled = styled.header`
       display: none;
     }
   }
-  @media (max-width: 1024px) {
-    & > div {
-      width: 90%;
-    }
-  }
 `;
