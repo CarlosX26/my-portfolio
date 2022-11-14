@@ -23,6 +23,7 @@ export const ProjectCardStyled = styled.li`
     display: flex;
     flex-direction: column;
     gap: 32px;
+    width: 100%;
   }
   & > div > p {
     width: 70%;
