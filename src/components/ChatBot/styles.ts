@@ -10,7 +10,7 @@ export const ChatBotStyled = styled(motion.div)`
   display: flex;
   flex-direction: column;
 
-  border-radius: 8px 8px 0 0;
+  border-radius: 16px 16px 0 0;
   background: var(--color-gray-2);
 
   .head-chat {
@@ -86,5 +86,11 @@ export const ChatBotStyled = styled(motion.div)`
   @media (max-width: 468px) {
     right: 0%;
     width: 100%;
+    .footer-chat > input {
+      width: 80%;
+    }
+    .footer-chat > button {
+      width: 15%;
+    }
   }
 `;
