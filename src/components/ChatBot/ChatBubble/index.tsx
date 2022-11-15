@@ -24,8 +24,13 @@ export const ChatBubble = ({
         ) : (
           <FaUserCircle />
         )}
-        {type === "link" ? (
-          <a href={reference} target="_blank" rel="noreferrer">
+        {type === "link" || type === "file" ? (
+          <a
+            href={reference}
+            target="_blank"
+            rel="noreferrer"
+            download={type === "file" ? true : false}
+          >
             {message}
           </a>
         ) : (

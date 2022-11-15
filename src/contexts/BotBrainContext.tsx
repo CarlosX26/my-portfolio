@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { iMessages } from "../components/ChatBot/types";
 import { iBotBrainContext, iPropsBotBrainContext } from "./types";
+import curriculoPdf from "../assets/pdf/curriculo.pdf";
 
 const BotBrainContext = createContext({} as iBotBrainContext);
 
@@ -85,18 +86,24 @@ export const BotBrainContextProvider = ({
       }, 500);
     } else if (message.toLocaleLowerCase().match(/whatsapp/g)) {
       const responseJarvis = {
-        message: "Desculpe recurso em desenvolvimento, tente outro.",
+        message: "Iniciar conversa com o Carlos.",
         from: "Jarvis",
-        type: "default",
+        type: "link",
+        reference:
+          "https://api.whatsapp.com/send?phone=+55++98981464032&text=Ol%C3%A1%20venho%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%2C%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os.",
       };
       setTimeout(() => {
         setMessages([...messages, userMessage, responseJarvis]);
       }, 500);
-    } else if (message.toLocaleLowerCase().match(/curriculo/g)) {
+    } else if (
+      message.toLocaleLowerCase().match(/curriculo/g) ||
+      message.toLocaleLowerCase().match(/currículo/g)
+    ) {
       const responseJarvis = {
-        message: "Desculpe recurso em desenvolvimento, tente outro.",
+        message: "Clique aqui para baixar o currículo do Carlos.",
         from: "Jarvis",
-        type: "default",
+        type: "file",
+        reference: curriculoPdf,
       };
       setTimeout(() => {
         setMessages([...messages, userMessage, responseJarvis]);
@@ -112,7 +119,7 @@ export const BotBrainContextProvider = ({
       }, 500);
     } else {
       const responseJarvis = {
-        message: "Desculpe recurso em desenvolvimento, tente outro.",
+        message: "Desculpe recurso não disponível, tente outro.",
         from: "Jarvis",
         type: "default",
       };
