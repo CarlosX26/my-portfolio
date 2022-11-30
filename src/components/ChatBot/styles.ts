@@ -51,6 +51,7 @@ export const ChatBotStyled = styled(motion.div)`
         padding: 16px 16px;
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         gap: 8px;
         overflow-y: scroll;
     }
@@ -78,6 +79,9 @@ export const ChatBotStyled = styled(motion.div)`
         height: 40px;
         border-radius: 50%;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .footer-chat > button > svg {
         font-size: 24px;

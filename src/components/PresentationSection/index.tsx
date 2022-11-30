@@ -33,23 +33,23 @@ export const PresentationSection = () => {
             <ContainerStyled>
                 <div className="box-text">
                     <HeadingStyledTwo>Desenvolvedor front end</HeadingStyledTwo>
-                    <h1>Carlos Junio</h1>
+                    <motion.h1
+                        initial={{ width: "10%" }}
+                        animate={{ width: "100%" }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: 3,
+                            repeatType: "reverse",
+                        }}
+                    >
+                        Carlos Junio
+                    </motion.h1>
 
                     <TextStyledOne fontStyle="italic" color="--color-gray-2">
-                        Olá bem vindo, sou Carlos Jr., tenho 21 anos e sou de
-                        Santa-Inês Maranhão. Ainda quando criança, tive meu
-                        primeiro contato com os computadores me lembro como se
-                        fosse ontem, na adolescência eu trocava os sistemas
-                        operacionais dos meus celulares, ao completar o ensino
-                        médio, já imginava que um dia seria desenvolvedor, então
-                        passei para o curso de Engenharia Da Computação,
-                        infelizmente não era o que eu queria, pois na faculdade
-                        não se aprende a programar, foi então que decidir correr
-                        atrás do que eu realmente amava, foi quando conheci a
-                        Kenzie Academy Brasil, e a partir daí, minha vida mudou
-                        por completo, comecei a dar meus primeiros passos com
-                        HTML, CSS e JAVASCRIPT, e hoje após mais de 6 meses de
-                        muito code, estou pronto para minha primeira vaga.
+                        Olá seja bem vindo, eu sou o Carlos, tenho 21 anos, sou
+                        formado em Desenvolvimento <strong>FRONT END</strong>{" "}
+                        pela <strong>Kenzie Academy Brasil</strong>, e estou
+                        sempre buscando novos desafios.
                     </TextStyledOne>
                 </div>
 
