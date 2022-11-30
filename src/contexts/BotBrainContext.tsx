@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { iMessages } from "../components/ChatBot/types";
 import { iBotBrainContext, iPropsBotBrainContext } from "./types";
-import curriculoPdf from "../assets/pdf/curriculo.pdf";
+import botImg from "../assets/img/chatbot.png";
 
 const BotBrainContext = createContext({} as iBotBrainContext);
 
@@ -10,6 +10,7 @@ export const BotBrainContextProvider = ({
 }: iPropsBotBrainContext) => {
     const botData = [
         {
+            img: botImg,
             message: "Olá eu sou o Jarvis.",
             from: "Jarvis",
             type: "default",
@@ -20,12 +21,29 @@ export const BotBrainContextProvider = ({
             type: "default",
         },
         {
-            message: "Como posso ajudar?",
+            message:
+                "Eu posso te ajudar com informações sobre contato, currículo e redes sociais referentes ao Carlos.",
             from: "Jarvis",
             type: "default",
         },
     ];
     const [messages, setMessages] = useState([...botData] as iMessages[]);
+
+    const generateMessage = (
+        message: string,
+        from: string,
+        type: string,
+        img?: string,
+        reference?: string
+    ): iMessages => {
+        return {
+            img,
+            message: message,
+            from: from,
+            type: type,
+            reference,
+        };
+    };
 
     const botDecisions = (userMessage: iMessages) => {
         setMessages([...messages, userMessage]);
@@ -35,65 +53,67 @@ export const BotBrainContextProvider = ({
         if (message.toLocaleLowerCase().includes("limpar")) {
             setMessages([...botData]);
         } else if (message.toLocaleLowerCase().match(/github/g)) {
-            const responseJarvis = {
-                message: "Aqui está o GitHub do Carlos.",
-                from: "Jarvis",
-                type: "link",
-                reference: "https://github.com/CarlosX26",
-            };
+            const responseJarvis = generateMessage(
+                "Aqui está o GitHub do Carlos.",
+                "Jarvis",
+                "link",
+                botImg,
+                "https://github.com/CarlosX26"
+            );
 
             setTimeout(() => {
                 setMessages([...messages, userMessage, responseJarvis]);
             }, 500);
         } else if (message.toLocaleLowerCase().match(/linkedin/g)) {
-            const responseJarvis = {
-                message: "Aqui está o LinkedIn do Carlos.",
-                from: "Jarvis",
-                type: "link",
-                reference:
-                    "https://www.linkedin.com/in/carlos-junio-b02165240/",
-            };
+            const responseJarvis = generateMessage(
+                "Aqui está o LinkedIn do Carlos.",
+                "Jarvis",
+                "link",
+                botImg,
+                "https://www.linkedin.com/in/carlos-junio26/"
+            );
             setTimeout(() => {
                 setMessages([...messages, userMessage, responseJarvis]);
             }, 500);
         } else if (message.toLocaleLowerCase().match(/contato/g)) {
-            const responseJarvis = {
-                message:
-                    "informações de contato: email:cjunior1@live.com número: (98) 98146-4032",
-                from: "Jarvis",
-                type: "default",
-            };
+            const responseJarvis = generateMessage(
+                "informações de contato: email:cjunior1@live.com número: (98) 98146-4032",
+                "Jarvis",
+                "default",
+                botImg
+            );
 
             setTimeout(() => {
                 setMessages([
                     ...messages,
                     userMessage,
                     responseJarvis,
-                    {
-                        message:
-                            "Deseja enviar um email, ou chamar no whatsapp?",
-                        from: "Jarvis",
-                        type: "default",
-                    },
+                    generateMessage(
+                        "Deseja enviar um email, ou chamar no whatsapp?",
+                        "Jarvis",
+                        "default"
+                    ),
                 ]);
             }, 500);
         } else if (message.toLocaleLowerCase().match(/email/g)) {
-            const responseJarvis = {
-                message: "Desculpe recurso em desenvolvimento, tente outro.",
-                from: "Jarvis",
-                type: "default",
-            };
+            const responseJarvis = generateMessage(
+                "Clique aqui para enviar um email ao Carlos.",
+                "Jarvis",
+                "link",
+                botImg,
+                "mailto:cjunior1@live.com"
+            );
             setTimeout(() => {
                 setMessages([...messages, userMessage, responseJarvis]);
             }, 500);
         } else if (message.toLocaleLowerCase().match(/whatsapp/g)) {
-            const responseJarvis = {
-                message: "Iniciar conversa com o Carlos.",
-                from: "Jarvis",
-                type: "link",
-                reference:
-                    "https://api.whatsapp.com/send?phone=+55++98981464032&text=Ol%C3%A1%20venho%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%2C%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os.",
-            };
+            const responseJarvis = generateMessage(
+                "Iniciar conversa com o Carlos.",
+                "Jarvis",
+                "link",
+                botImg,
+                "https://api.whatsapp.com/send?phone=+55++98981464032&text=Ol%C3%A1%20venho%20atrav%C3%A9s%20do%20seu%20portif%C3%B3lio%2C%20e%20gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20seus%20servi%C3%A7os."
+            );
             setTimeout(() => {
                 setMessages([...messages, userMessage, responseJarvis]);
             }, 500);
@@ -101,21 +121,22 @@ export const BotBrainContextProvider = ({
             message.toLocaleLowerCase().match(/curriculo/g) ||
             message.toLocaleLowerCase().match(/currículo/g)
         ) {
-            const responseJarvis = {
-                message: "Clique aqui para baixar o currículo do Carlos.",
-                from: "Jarvis",
-                type: "file",
-                reference: curriculoPdf,
-            };
+            const responseJarvis = generateMessage(
+                "Funcionalidade em desenvolvimento ;)",
+                "Jarvis",
+                "default",
+                botImg
+            );
             setTimeout(() => {
                 setMessages([...messages, userMessage, responseJarvis]);
             }, 500);
         } else {
-            const responseJarvis = {
-                message: "Desculpe recurso não disponível, tente outro.",
-                from: "Jarvis",
-                type: "default",
-            };
+            const responseJarvis = generateMessage(
+                "Desculpe recurso não disponível, tente outro.",
+                "Jarvis",
+                "default",
+                botImg
+            );
             setTimeout(() => {
                 setMessages([...messages, userMessage, responseJarvis]);
             }, 500);

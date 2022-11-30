@@ -1,14 +1,15 @@
 export interface iPropsChatBot {
-  showChat: () => void;
+    showChat: () => void;
 }
 
 export interface iFormChatBot {
-  message: string;
+    message: string;
 }
 
 export interface iMessages {
-  message: string;
-  from: string;
-  type: string;
-  reference?: string;
+    img?: string | "default";
+    message: string;
+    from: string;
+    type: string;
+    reference?: string | undefined;
 }
