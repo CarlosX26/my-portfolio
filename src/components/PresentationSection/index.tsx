@@ -32,24 +32,17 @@ export const PresentationSection = () => {
         <PresentationSectionStyled>
             <ContainerStyled>
                 <div className="box-text">
-                    <HeadingStyledTwo>Desenvolvedor front end</HeadingStyledTwo>
-                    <motion.h1
-                        initial={{ width: "10%" }}
-                        animate={{ width: "100%" }}
-                        transition={{
-                            repeat: Infinity,
-                            duration: 3,
-                            repeatType: "reverse",
-                        }}
-                    >
-                        Carlos Junio
-                    </motion.h1>
+                    <HeadingStyledTwo>
+                        Desenvolvedor Web Full Stack
+                    </HeadingStyledTwo>
+                    <h1>Carlos Junio</h1>
 
                     <TextStyledOne fontStyle="italic" color="--color-gray-2">
-                        Olá seja bem vindo, eu sou o Carlos, tenho 21 anos, sou
-                        formado em Desenvolvimento <strong>FRONT END</strong>{" "}
-                        pela <strong>Kenzie Academy Brasil</strong>, e estou
-                        sempre buscando novos desafios.
+                        Olá seja bem vindo, eu sou o Carlos, tenho 21 anos,
+                        estou me formando em Desenvolvimento{" "}
+                        <strong>Web Full Stack</strong> pela{" "}
+                        <strong>Kenzie Academy Brasil</strong>, e estou sempre
+                        buscando novos desafios.
                     </TextStyledOne>
                 </div>
 

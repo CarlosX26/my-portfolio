@@ -40,16 +40,6 @@ export const PresentationSectionStyled = styled.section`
         white-space: nowrap;
         overflow: hidden;
     }
-    & > div > .box-text > h1::after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 101;
-        background-color: #4263eb;
-        width: 4px;
-        height: 100%;
-    }
     & > div > .box-text > p {
         max-width: 520px;
     }
