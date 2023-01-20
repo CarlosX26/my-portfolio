@@ -28,6 +28,7 @@ export const BotBrainContextProvider = ({
         },
     ];
     const [messages, setMessages] = useState([...botData] as iMessages[]);
+    const [startConversation, setStartConversation] = useState(false);
 
     const generateMessage = (
         message: string,
@@ -144,7 +145,14 @@ export const BotBrainContextProvider = ({
     };
 
     return (
-        <BotBrainContext.Provider value={{ botDecisions, messages }}>
+        <BotBrainContext.Provider
+            value={{
+                botDecisions,
+                messages,
+                startConversation,
+                setStartConversation,
+            }}
+        >
             {children}
         </BotBrainContext.Provider>
     );

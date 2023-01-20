@@ -98,19 +98,39 @@ export const PresentationSectionStyled = styled.section`
         cursor: pointer;
     }
 
-    #robot > p {
-        opacity: 0;
+    #robot > div ~ div {
         position: absolute;
-        top: 0;
-        left: -128px;
+        top: -24px;
+        left: -78px;
         background: #fff;
         color: var(--color-gray-3);
         padding: 4px;
         border-radius: 8px;
-        transition: all 0.3s ease-in-out;
-    }
-    #robot:hover > p {
-        opacity: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        gap: 8px;
+
+        & > button > svg {
+            color: red;
+            font-size: 20px;
+            /* z-index: 2; */
+        }
+
+        & > p {
+            width: 84px;
+        }
+
+        & > span {
+            position: absolute;
+            bottom: -12px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 24px solid transparent;
+            border-left: 32px solid #fff;
+            rotate: 180deg;
+        }
     }
 
     @media (max-width: 868px) {

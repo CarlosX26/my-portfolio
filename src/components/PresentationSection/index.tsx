@@ -1,18 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { CgArrowLongDown } from "react-icons/cg";
 import { AnimatePresence, motion } from "framer-motion";
+import { SlClose } from "react-icons/sl";
 import lottie from "lottie-web";
 
 import { ContainerStyled } from "../../styles/container";
 import { HeadingStyledTwo, TextStyledOne } from "../../styles/typography";
 import { PresentationSectionStyled } from "./styles";
 import profileImg from "../../assets/img/profile.jpg";
+import botAltert from "../../assets/audio/viber.mp3";
 import bgVideo from "../../assets/video/bg-video.mp4";
 import { ChatBot } from "../ChatBot";
+import { useBotBrainContext } from "../../contexts/BotBrainContext";
 
 export const PresentationSection = () => {
     const refAnimation = useRef<HTMLDivElement | null>(null);
+    const refAudioAlert = useRef<HTMLAudioElement | null>(null);
     const [chatOn, setChatOn] = useState(false);
+    const { startConversation, setStartConversation } = useBotBrainContext();
 
     const showChat = () => {
         setChatOn((prevState) => !prevState);
@@ -26,6 +31,12 @@ export const PresentationSection = () => {
             autoplay: true,
             animationData: require("../../assets/76723-robot-wave.json"),
         });
+
+        setTimeout(async () => {
+            setStartConversation(true);
+            await refAudioAlert.current?.play();
+        }, 5000);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -63,7 +74,21 @@ export const PresentationSection = () => {
                 <div id="robot" onClick={showChat}>
                     <div ref={refAnimation}></div>
 
-                    <p>Olá, vamos conversar?</p>
+                    {startConversation && (
+                        <div>
+                            <button
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    setStartConversation(false);
+                                }}
+                            >
+                                <SlClose />
+                            </button>
+                            <p>Olá, vamos conversar?</p>
+                            <span></span>
+                            <audio src={botAltert} ref={refAudioAlert}></audio>
+                        </div>
+                    )}
                 </div>
 
                 <AnimatePresence>

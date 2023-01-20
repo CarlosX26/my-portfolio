@@ -17,6 +17,10 @@ export const ChatBot = ({ showChat }: iPropsChatBot) => {
     const { register, handleSubmit, reset } = useForm<iFormChatBot>();
 
     const onSubmit = ({ message }: iFormChatBot) => {
+        if (!message) {
+            return;
+        }
+
         const userMessage = {
             img: "default",
             message: message,
