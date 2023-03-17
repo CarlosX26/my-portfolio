@@ -8,7 +8,7 @@ Este é meu portfólio oficial, desenvolvido utilizando React, onde você pode e
 Clone o projeto
 
 ```bash
-  git@github.com:CarlosX26/my-portfolio.git
+  git clone git@github.com:CarlosX26/my-portfolio.git
 ```
 
 Entre no diretório do projeto
