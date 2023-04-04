@@ -1,13 +1,13 @@
 import React from "react"
-import { iMessages } from "../components/ChatBot/types"
+import { IMessages } from "../components/ChatBot/types"
 
-export interface iPropsBotBrainContext {
+export interface IPropsBotBrainContext {
   children: React.ReactNode
 }
 
-export interface iBotBrainContext {
-  messages: iMessages[]
-  botDecisions: (message: iMessages) => void
+export interface IBotBrainContext {
+  messages: IMessages[]
+  botDecisions: (message: IMessages) => void
   startConversation: boolean
   setStartConversation: React.Dispatch<React.SetStateAction<boolean>>
 }

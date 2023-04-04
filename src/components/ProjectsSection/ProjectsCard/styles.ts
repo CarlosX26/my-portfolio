@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { iPropsProjectCardStyled } from "./types"
+import { IPropsProjectCardStyled } from "./types"
 
 export const ProjectCardStyled = styled.li`
   display: flex;
@@ -12,10 +12,10 @@ export const ProjectCardStyled = styled.li`
     object-fit: cover;
     object-position: center;
     border-radius: 0px 0px
-      ${({ left }: iPropsProjectCardStyled) =>
+      ${({ left }: IPropsProjectCardStyled) =>
         left ? "0px 256px" : "256px 0px"};
 
-    align-self: ${({ left }: iPropsProjectCardStyled) =>
+    align-self: ${({ left }: IPropsProjectCardStyled) =>
       left ? "end" : "unset"};
   }
 
@@ -57,7 +57,7 @@ export const ProjectCardStyled = styled.li`
     & > video {
       height: 224px;
       border-radius: 0px 0px
-        ${({ left }: iPropsProjectCardStyled) =>
+        ${({ left }: IPropsProjectCardStyled) =>
           left ? "0px 128px" : "128px 0px"};
     }
   }

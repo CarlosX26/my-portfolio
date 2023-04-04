@@ -24,8 +24,8 @@ export const Header = () => {
         <HeadingStyledOne>{"<Carlos Jr./>"}</HeadingStyledOne>
 
         <nav>
-          <a href="#skills">
-            skills
+          <a href="#tecnologias">
+            tecnologias
             <div></div>
           </a>
           <a href="#projetos">

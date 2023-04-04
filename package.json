@@ -6,7 +6,6 @@
     "@chakra-ui/react": "^2.4.2",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@hookform/resolvers": "^2.9.10",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
@@ -19,12 +18,11 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.39.3",
+    "react-hook-form": "^7.43.9",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.6.0",
     "styled-components": "^5.3.6",
-    "typescript": "5.0.3",
-    "yup": "^0.32.11"
+    "typescript": "5.0.3"
   },
   "scripts": {
     "dev": "next dev",

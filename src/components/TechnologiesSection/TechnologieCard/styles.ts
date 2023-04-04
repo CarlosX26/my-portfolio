@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const SkillCardStyled = styled.li`
+export const TechnologieCardStyled = styled.li`
   position: relative;
   width: 100%;
   height: 200px;

@@ -1,6 +1,6 @@
-import { IProjectsList } from "./types"
+import { IProjects } from "./types"
 
-export const projectsList: IProjectsList[] = [
+export const projectsList: IProjects[] = [
   {
     name: "Panda Cooking",
     video: "/assets/video/panda-cooking-demo.mp4",

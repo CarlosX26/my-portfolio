@@ -1,9 +1,9 @@
-export interface ISkillsList {
+export interface ITechnologies {
   name: string
   img: string
   description: string
 }
-export interface IProjectsList {
+export interface IProjects {
   name: string
   video: string
   description: string

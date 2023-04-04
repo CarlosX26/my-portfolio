@@ -1,14 +1,12 @@
-import { StaticImageData } from "next/image"
-
-export interface iPropsChatBot {
+export interface IPropsChatBot {
   showChat: () => void
 }
 
-export interface iFormChatBot {
+export interface IFormChatBot {
   message: string
 }
 
-export interface iMessages {
+export interface IMessages {
   img?: string | "default" | undefined
   message: string
   from: string

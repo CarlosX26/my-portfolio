@@ -1,4 +1,4 @@
-export interface iPropsChatBubble {
+export interface IPropsChatBubble {
   img?: string
   message: string
   from: string
@@ -6,7 +6,7 @@ export interface iPropsChatBubble {
   reference?: string
 }
 
-export interface iPropsChatBubbleStyled {
+export interface IPropsChatBubbleStyled {
   from: string
   type: string
 }

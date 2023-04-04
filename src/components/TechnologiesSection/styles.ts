@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const SkillsSectionStyled = styled.section`
+export const TechnologiesSectionStyled = styled.section`
   background-color: var(--color-brand-2);
 
   & > div {

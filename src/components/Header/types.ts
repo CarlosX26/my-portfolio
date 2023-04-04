@@ -1,3 +1,3 @@
-export interface iPropsHeaderStyled {
+export interface IPropsHeaderStyled {
   background: boolean
 }

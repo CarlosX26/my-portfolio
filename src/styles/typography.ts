@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { iTextStyledProps } from "./types/types"
+import { ITextStyledProps } from "./types/types"
 
 const HeadingStyledOne = styled.h1`
   font-size: var(--heading-1);
@@ -20,8 +20,8 @@ const HeadingStyledThree = styled.h3`
 const TextStyledOne = styled.p`
   font-size: var(--text-1);
   font-weight: 400;
-  font-style: ${({ fontStyle = "normal" }: iTextStyledProps) => fontStyle};
-  color: var(${({ color = "--color-text" }: iTextStyledProps) => color});
+  font-style: ${({ fontStyle = "normal" }: ITextStyledProps) => fontStyle};
+  color: var(${({ color = "--color-text" }: ITextStyledProps) => color});
 `
 
 const TextStyledTwo = styled(TextStyledOne)`

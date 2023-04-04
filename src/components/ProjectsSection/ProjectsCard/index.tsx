@@ -1,6 +1,6 @@
 import { ProjectCardStyled } from "./styles"
-import { iPropsProjectsCard } from "./types"
+import { IPropsProjectsCard } from "./types"
 
-export const ProjectCard = ({ children, left }: iPropsProjectsCard) => {
+export const ProjectCard = ({ children, left }: IPropsProjectsCard) => {
   return <ProjectCardStyled left={left}>{children}</ProjectCardStyled>
 }

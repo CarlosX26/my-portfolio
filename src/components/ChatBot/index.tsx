@@ -5,18 +5,18 @@ import { useForm } from "react-hook-form"
 import { ChatBubble } from "./ChatBubble"
 import { useBotBrainContext } from "../../contexts/BotBrainContext"
 
-import { iFormChatBot, iPropsChatBot } from "./types"
+import { IFormChatBot, IPropsChatBot } from "./types"
 
 import { ChatBotStyled } from "./styles"
 import { TextStyledOne } from "../../styles/typography"
 import Image from "next/image"
 
-export const ChatBot = ({ showChat }: iPropsChatBot) => {
+export const ChatBot = ({ showChat }: IPropsChatBot) => {
   const { botDecisions, messages } = useBotBrainContext()
 
-  const { register, handleSubmit, reset } = useForm<iFormChatBot>()
+  const { register, handleSubmit, reset } = useForm<IFormChatBot>()
 
-  const onSubmit = ({ message }: iFormChatBot) => {
+  const onSubmit = ({ message }: IFormChatBot) => {
     if (!message) {
       return
     }

@@ -1,8 +1,8 @@
-export interface iPropsProjectsCard {
+export interface IPropsProjectsCard {
   children: React.ReactNode
   left?: boolean
 }
 
-export interface iPropsProjectCardStyled {
+export interface IPropsProjectCardStyled {
   left?: boolean
 }

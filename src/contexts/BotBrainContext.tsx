@@ -1,12 +1,12 @@
 import { createContext, useContext, useState } from "react"
-import { iMessages } from "../components/ChatBot/types"
-import { iBotBrainContext, iPropsBotBrainContext } from "./types"
+import { IMessages } from "../components/ChatBot/types"
+import { IBotBrainContext, IPropsBotBrainContext } from "./types"
 
-const BotBrainContext = createContext({} as iBotBrainContext)
+const BotBrainContext = createContext({} as IBotBrainContext)
 
 export const BotBrainContextProvider = ({
   children,
-}: iPropsBotBrainContext) => {
+}: IPropsBotBrainContext) => {
   const botImg = "/assets/img/chatbot.png"
 
   const botData = [
@@ -28,7 +28,7 @@ export const BotBrainContextProvider = ({
       type: "default",
     },
   ]
-  const [messages, setMessages] = useState([...botData] as iMessages[])
+  const [messages, setMessages] = useState([...botData] as IMessages[])
   const [startConversation, setStartConversation] = useState(false)
 
   const generateMessage = (
@@ -37,7 +37,7 @@ export const BotBrainContextProvider = ({
     type: string,
     img?: string,
     reference?: string
-  ): iMessages => {
+  ): IMessages => {
     return {
       img,
       message: message,
@@ -47,7 +47,7 @@ export const BotBrainContextProvider = ({
     }
   }
 
-  const botDecisions = (userMessage: iMessages) => {
+  const botDecisions = (userMessage: IMessages) => {
     setMessages([...messages, userMessage])
 
     const { message } = userMessage
@@ -159,5 +159,5 @@ export const BotBrainContextProvider = ({
   )
 }
 
-export const useBotBrainContext = (): iBotBrainContext =>
+export const useBotBrainContext = (): IBotBrainContext =>
   useContext(BotBrainContext)

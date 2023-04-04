@@ -1,11 +1,11 @@
 import styled from "styled-components"
-import { iPropsChatBubbleStyled } from "./types"
+import { IPropsChatBubbleStyled } from "./types"
 
 export const ChatBubbleStyled = styled.div`
   display: flex;
   gap: 16px;
   align-self: end;
-  flex-direction: ${({ from }: iPropsChatBubbleStyled) =>
+  flex-direction: ${({ from }: IPropsChatBubbleStyled) =>
     from === "Jarvis" ? "row" : "row-reverse"};
 
   & > p,
@@ -13,13 +13,13 @@ export const ChatBubbleStyled = styled.div`
     min-height: 32px;
     width: 240px;
     background: var(
-      ${({ from }: iPropsChatBubbleStyled) =>
+      ${({ from }: IPropsChatBubbleStyled) =>
         from === "Jarvis" ? "--color-brand-2" : "--color-brand-1"}
     );
     border-radius: 8px;
     color: var(--color-gray-1);
     padding: 6px 0 6px 8px;
-    text-decoration: ${({ type }: iPropsChatBubbleStyled) =>
+    text-decoration: ${({ type }: IPropsChatBubbleStyled) =>
       type === "link" ? "underline" : "unset"};
   }
 `

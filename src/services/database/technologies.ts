@@ -1,6 +1,6 @@
-import { ISkillsList } from "./types"
+import { ITechnologies } from "./types"
 
-export const skillsList: ISkillsList[] = [
+export const technologiesList: ITechnologies[] = [
   {
     name: "HTML",
     img: "/assets/img/icons8-html-5.svg",

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Avatar, AvatarBadge } from "@chakra-ui/react"
 
-import { iPropsChatBubble } from "./types"
+import { IPropsChatBubble } from "./types"
 import { ChatBubbleStyled } from "./styles"
 
 export const ChatBubble = ({
@@ -10,7 +10,7 @@ export const ChatBubble = ({
   from,
   type,
   reference,
-}: iPropsChatBubble) => {
+}: IPropsChatBubble) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

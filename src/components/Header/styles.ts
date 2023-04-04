@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { iPropsHeaderStyled } from "./types"
+import { IPropsHeaderStyled } from "./types"
 
 export const HeaderStyled = styled.header`
   position: fixed;
@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
 
-  background-color: ${({ background }: iPropsHeaderStyled) =>
+  background-color: ${({ background }: IPropsHeaderStyled) =>
     background ? "#212529" : "none"};
 
   & > div {

@@ -1,6 +1,6 @@
 import { Header } from "../components/Header"
 import { PresentationSection } from "../components/PresentationSection"
-import { SkillsSection } from "../components/SkillsSection"
+import { TechnologiesSection } from "../components/TechnologiesSection"
 import { ProjectsSection } from "../components/ProjectsSection"
 import { Footer } from "../components/Footer"
 import Head from "next/head"
@@ -16,7 +16,7 @@ const Home = () => {
       </Head>
       <Header />
       <PresentationSection />
-      <SkillsSection />
+      <TechnologiesSection />
       <ProjectsSection />
       <Footer />
     </>
