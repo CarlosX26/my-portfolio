@@ -1,7 +1,7 @@
-import { ContainerStyled } from "../../styles/container";
-import { HeadingStyledOne } from "../../styles/typography";
-import { ProjectList } from "./ProjectsList";
-import { ProjectsSectionStyled } from "./styles";
+import { ContainerStyled } from "../../styles/container"
+import { HeadingStyledOne } from "../../styles/typography"
+import { ProjectList } from "./ProjectsList"
+import { ProjectsSectionStyled } from "./styles"
 
 export const ProjectsSection = () => {
   return (
@@ -12,5 +12,5 @@ export const ProjectsSection = () => {
 
       <ProjectList />
     </ProjectsSectionStyled>
-  );
-};
+  )
+}

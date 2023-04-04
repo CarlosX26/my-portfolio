@@ -1,12 +1,12 @@
-import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa"
+import { motion } from "framer-motion"
 
-import { ProjectCard } from "../ProjectsCard";
-import { projectsList } from "../../../services/database/projects";
+import { ProjectCard } from "../ProjectsCard"
+import { projectsList } from "../../../services/database/projects"
 
-import { ContainerStyled } from "../../../styles/container";
-import { HeadingStyledTwo, TextStyledOne } from "../../../styles/typography";
-import { ProjectListStyled } from "./styles";
+import { ContainerStyled } from "../../../styles/container"
+import { HeadingStyledTwo, TextStyledOne } from "../../../styles/typography"
+import { ProjectListStyled } from "./styles"
 
 export const ProjectList = () => {
   return (
@@ -60,5 +60,5 @@ export const ProjectList = () => {
         )
       )}
     </ProjectListStyled>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const SkillListStyled = styled.ul`
   display: grid;
@@ -16,4 +16,4 @@ export const SkillListStyled = styled.ul`
   @media (max-width: 468px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`;
+`

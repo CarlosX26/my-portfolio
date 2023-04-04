@@ -1,3 +1,3 @@
 export interface iPropsSkillList {
-  children: React.ReactNode;
+  children: React.ReactNode
 }

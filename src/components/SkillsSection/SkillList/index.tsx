@@ -1,6 +1,6 @@
-import { iPropsSkillList } from "./types";
-import { SkillListStyled } from "./styles";
+import { iPropsSkillList } from "./types"
+import { SkillListStyled } from "./styles"
 
 export const SkillList = ({ children }: iPropsSkillList) => {
-  return <SkillListStyled>{children}</SkillListStyled>;
-};
+  return <SkillListStyled>{children}</SkillListStyled>
+}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const SkillCardStyled = styled.li`
   position: relative;
@@ -61,4 +61,4 @@ export const SkillCardStyled = styled.li`
   &:hover > div {
     display: block;
   }
-`;
+`

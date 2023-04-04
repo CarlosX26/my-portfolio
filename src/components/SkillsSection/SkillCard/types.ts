@@ -1,5 +1,5 @@
 export interface iPropsSkillCard {
-  name: string;
-  img: string;
-  description: string;
+  name: string
+  img: string
+  description: string
 }

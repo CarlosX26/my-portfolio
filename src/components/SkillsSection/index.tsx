@@ -1,10 +1,10 @@
-import { SkillCard } from "./SkillCard";
-import { SkillList } from "./SkillList";
+import { SkillCard } from "./SkillCard"
+import { SkillList } from "./SkillList"
 
-import { ContainerStyled } from "../../styles/container";
-import { SkillsSectionStyled } from "./styles";
-import { HeadingStyledOne } from "../../styles/typography";
-import { skillsList } from "../../services/database/skills";
+import { ContainerStyled } from "../../styles/container"
+import { SkillsSectionStyled } from "./styles"
+import { HeadingStyledOne } from "../../styles/typography"
+import { skillsList } from "../../services/database/skills"
 
 export const SkillsSection = () => {
   return (
@@ -23,5 +23,5 @@ export const SkillsSection = () => {
         </SkillList>
       </ContainerStyled>
     </SkillsSectionStyled>
-  );
-};
+  )
+}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const SkillsSectionStyled = styled.section`
   background-color: var(--color-brand-2);
@@ -7,4 +7,4 @@ export const SkillsSectionStyled = styled.section`
     display: flex;
     flex-direction: column;
   }
-`;
+`

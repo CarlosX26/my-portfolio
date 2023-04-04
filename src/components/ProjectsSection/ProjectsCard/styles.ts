@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { iPropsProjectCardStyled } from "./types";
+import styled from "styled-components"
+import { iPropsProjectCardStyled } from "./types"
 
 export const ProjectCardStyled = styled.li`
   display: flex;
@@ -61,4 +61,4 @@ export const ProjectCardStyled = styled.li`
           left ? "0px 128px" : "128px 0px"};
     }
   }
-`;
+`

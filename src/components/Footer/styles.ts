@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const FooterStyled = styled.footer`
   background-color: var(--color-gray-3);
@@ -78,4 +78,4 @@ export const FooterStyled = styled.footer`
       display: none;
     }
   }
-`;
+`
