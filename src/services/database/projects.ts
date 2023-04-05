@@ -2,6 +2,19 @@ import { IProjects } from "./types"
 
 export const projectsList: IProjects[] = [
   {
+    name: "Fast Busines",
+    video: "/assets/video/fsb-demo.mp4",
+    description:
+      "O Fast Busines é uma aplicação de e-commerce full stack que tem como objetivo ser uma solução simples e de fácil utilização para seus usuários.",
+    links: [
+      { name: "Ver projeto", ref: "https://fast-busines.netlify.app/" },
+      {
+        name: "Github",
+        ref: "https://github.com/CarlosX26/fast-busines",
+      },
+    ],
+  },
+  {
     name: "Panda Cooking",
     video: "/assets/video/panda-cooking-demo.mp4",
     description:
@@ -19,6 +32,22 @@ export const projectsList: IProjects[] = [
     links: [
       { name: "Ver projeto", ref: "https://k-hubx.vercel.app/" },
       { name: "Github", ref: "https://github.com/CarlosX26/k-hub" },
+    ],
+  },
+  {
+    name: "Drop Mail",
+    video: "/assets/video/drop-mail-demo.mp4",
+    description:
+      "Esta é uma aplicação web, onde o usúario tem acesso a uma caixa de emails temporário.",
+    links: [
+      {
+        name: "Ver projeto",
+        ref: "https://drop-mail-temp.vercel.app/",
+      },
+      {
+        name: "Github",
+        ref: "https://github.com/CarlosX26/drop-mail",
+      },
     ],
   },
   {
@@ -43,6 +72,18 @@ export const projectsList: IProjects[] = [
       {
         name: "Ver projeto",
         ref: "https://react-hamburgueria-kenzie.vercel.app/",
+      },
+    ],
+  },
+  {
+    name: "Nu Kenzie",
+    video: "/assets/video/nu-kenzie-demo.mp4",
+    description:
+      "Nu Kenzie, é uma aplicação web que possibilita você gerenciar suas finanças de forma fácil.",
+    links: [
+      {
+        name: "Ver projeto",
+        ref: "https://react-nu-kenziecj.vercel.app/",
       },
     ],
   },

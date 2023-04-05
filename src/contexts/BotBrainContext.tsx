@@ -7,7 +7,7 @@ const BotBrainContext = createContext({} as IBotBrainContext)
 export const BotBrainContextProvider = ({
   children,
 }: IPropsBotBrainContext) => {
-  const botImg = "/assets/img/chatbot.png"
+  const botImg = "https://img.icons8.com/3d-fluency/94/null/chatbot.png"
 
   const botData = [
     {

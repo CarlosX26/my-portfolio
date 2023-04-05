@@ -43,7 +43,7 @@ export const ChatBot = ({ showChat }: IPropsChatBot) => {
       <div className="head-chat">
         <div>
           <Image
-            src="/assets/img/chatbot.png"
+            src="https://img.icons8.com/3d-fluency/94/null/chatbot.png"
             alt="bot_img"
             width={48}
             height={48}
