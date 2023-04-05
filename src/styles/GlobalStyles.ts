@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyles = createGlobalStyle`
 *{
@@ -14,9 +14,9 @@ const GlobalStyles = createGlobalStyle`
 }
 
 :root{
-    --color-brand-1:#9893ad;
-    --color-brand-2:#2b3f5b;
-    --color-brand-3:#13263a;
+    --color-brand-1:#503A65;
+    --color-brand-2:#332947;
+    --color-brand-3:#3A4465;
 
     --color-gray-1:#f9f9f9;
     --color-gray-2:#e5e3ee;
@@ -64,6 +64,6 @@ img{
     max-width:100%;
 }
 
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

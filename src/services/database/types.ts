@@ -1,11 +1,14 @@
-export interface iSkillsList {
-  name: string;
-  img: string;
-  description: string;
+export interface ITechnologies {
+  name: string
+  img: string
+  experience: string
 }
-export interface iProjectsList {
-  name: string;
-  video: string;
-  description: string;
-  link: string;
+export interface IProjects {
+  name: string
+  video: string
+  description: string
+  links: {
+    name: string
+    ref: string
+  }[]
 }

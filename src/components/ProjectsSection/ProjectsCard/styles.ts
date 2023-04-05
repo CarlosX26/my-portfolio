@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { iPropsProjectCardStyled } from "./types";
+import styled from "styled-components"
+import { IPropsProjectCardStyled } from "./types"
 
 export const ProjectCardStyled = styled.li`
   display: flex;
@@ -12,10 +12,10 @@ export const ProjectCardStyled = styled.li`
     object-fit: cover;
     object-position: center;
     border-radius: 0px 0px
-      ${({ left }: iPropsProjectCardStyled) =>
+      ${({ left }: IPropsProjectCardStyled) =>
         left ? "0px 256px" : "256px 0px"};
 
-    align-self: ${({ left }: iPropsProjectCardStyled) =>
+    align-self: ${({ left }: IPropsProjectCardStyled) =>
       left ? "end" : "unset"};
   }
 
@@ -31,7 +31,8 @@ export const ProjectCardStyled = styled.li`
     line-height: 24px;
     letter-spacing: 2px;
   }
-  & > div > a {
+
+  & > div > .box-links > a {
     max-width: 136px;
     font-weight: 700;
     font-size: 20px;
@@ -42,6 +43,10 @@ export const ProjectCardStyled = styled.li`
     gap: 8px;
 
     text-decoration: underline;
+  }
+  .box-links {
+    display: flex;
+    gap: 16px;
   }
   @media (max-width: 868px) {
     & > video {
@@ -57,8 +62,8 @@ export const ProjectCardStyled = styled.li`
     & > video {
       height: 224px;
       border-radius: 0px 0px
-        ${({ left }: iPropsProjectCardStyled) =>
+        ${({ left }: IPropsProjectCardStyled) =>
           left ? "0px 128px" : "128px 0px"};
     }
   }
-`;
+`
