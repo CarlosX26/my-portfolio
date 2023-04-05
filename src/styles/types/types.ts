@@ -1,4 +1,4 @@
-export interface iTextStyledProps {
-  color?: string;
-  fontStyle?: string;
+export interface ITextStyledProps {
+  color?: string
+  fontStyle?: string
 }

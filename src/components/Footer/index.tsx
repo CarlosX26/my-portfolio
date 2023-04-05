@@ -1,46 +1,26 @@
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-
-import { schemaContact } from "../../validations/schemaContact";
-import { iFormContact } from "./types";
-
-import { ContainerStyled } from "../../styles/container";
-import {
-  HeadingStyledThree,
-  HeadingStyledTwo,
-  TextStyledOne,
-} from "../../styles/typography";
-import { FooterStyled } from "./styles";
-import profileImg from "../../assets/img/profile.jpg";
-// import { toast } from "react-hot-toast";
+import { BsLinkedin, BsGithub } from "react-icons/bs"
+import { ContainerStyled } from "../../styles/container"
+import { HeadingStyledThree, HeadingStyledTwo } from "../../styles/typography"
+import { FooterStyled } from "./styles"
+import Image from "next/image"
 
 export const Footer = () => {
-  const {
-    register,
-    handleSubmit,
-    // formState: { errors },
-    reset,
-  } = useForm<iFormContact>({
-    resolver: yupResolver(schemaContact),
-  });
-
-  const onSubmit = (data: iFormContact) => {
-    console.log(data);
-    reset();
-  };
-
   return (
     <FooterStyled>
       <ContainerStyled>
         <div className="box-info">
-          <img src={profileImg} alt="profile_img" />
+          <Image
+            src="/assets/img/profile.webp"
+            alt="profile_img"
+            width={240}
+            height={240}
+          />
           <div>
             <HeadingStyledTwo>Eu sou Carlos Junio</HeadingStyledTwo>
             <HeadingStyledThree>Always news things!</HeadingStyledThree>
             <div>
               <a
-                href="https://www.linkedin.com/in/carlos-junio-b02165240/"
+                href="https://www.linkedin.com/in/carlos-junio26/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -56,15 +36,7 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-
-        <form className="box-email" onSubmit={handleSubmit(onSubmit)}>
-          <TextStyledOne id="contato">Contato</TextStyledOne>
-          <input type="text" placeholder="Nome" {...register("name")} />
-          <input type="text" placeholder="Email" {...register("email")} />
-          <textarea placeholder="Mensagem..." {...register("message")} />
-          <button type="submit">Enviar email</button>
-        </form>
       </ContainerStyled>
     </FooterStyled>
-  );
-};
+  )
+}

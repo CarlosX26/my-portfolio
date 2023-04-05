@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const FooterStyled = styled.footer`
   background-color: var(--color-gray-3);
@@ -35,39 +35,6 @@ export const FooterStyled = styled.footer`
     font-size: 32px;
   }
 
-  .box-email {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .box-email > input {
-    min-width: 248px;
-    height: 48px;
-    border-radius: 8px;
-    padding-left: 16px;
-  }
-  .box-email > input:focus {
-    outline: 2px solid var(--color-brand-2);
-  }
-  .box-email > textarea:focus {
-    outline: 2px solid var(--color-brand-2);
-  }
-  .box-email > textarea {
-    min-width: 248px;
-    height: 48px;
-    border-radius: 8px;
-    padding-left: 16px;
-    padding-top: 16px;
-  }
-  .box-email > button {
-    height: 48px;
-    border-radius: 8px;
-    background: var(--color-brand-2);
-    color: var(--color-gray-1);
-    cursor: pointer;
-  }
-
   @media (max-width: 868px) {
     & > div {
       flex-direction: column;
@@ -78,4 +45,4 @@ export const FooterStyled = styled.footer`
       display: none;
     }
   }
-`;
+`
