@@ -31,7 +31,8 @@ export const ProjectCardStyled = styled.li`
     line-height: 24px;
     letter-spacing: 2px;
   }
-  & > div > a {
+
+  & > div > .box-links > a {
     max-width: 136px;
     font-weight: 700;
     font-size: 20px;
@@ -42,6 +43,10 @@ export const ProjectCardStyled = styled.li`
     gap: 8px;
 
     text-decoration: underline;
+  }
+  .box-links {
+    display: flex;
+    gap: 16px;
   }
   @media (max-width: 868px) {
     & > video {

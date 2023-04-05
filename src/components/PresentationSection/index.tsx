@@ -54,14 +54,14 @@ export const PresentationSection = () => {
 
         <div className="box-img">
           <Image
-            src="/assets/img/profile.jpg"
+            src="/assets/img/profile.webp"
             alt="profile__img"
             width={240}
             height={240}
           />
         </div>
 
-        <a className="box-scroll-icon" href="#skills">
+        <a className="box-scroll-icon" href="#tecnologias">
           <motion.div
             whileHover={{ top: 4 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -96,7 +96,7 @@ export const PresentationSection = () => {
         </AnimatePresence>
       </ContainerStyled>
 
-      {/* <video src={bgVideo} autoPlay muted loop playsInline /> */}
+      <Image src="/assets/img/bg-img.gif" alt="bg-img" width={32} height={32} />
     </PresentationSectionStyled>
   )
 }

@@ -1,19 +1,18 @@
 import Image from "next/image"
-import { HeadingStyledTwo, TextStyledOne } from "../../../styles/typography"
+import { HeadingStyledThree, TextStyledOne } from "../../../styles/typography"
 import { TechnologieCardStyled } from "./styles"
 import { IPropsTechnologieCard } from "./types"
 
 export const TechnologieCard = ({
   img,
   name,
-  description,
+  experience,
 }: IPropsTechnologieCard) => {
   return (
     <TechnologieCardStyled>
       <Image src={img} alt="skill__icon" width={96} height={96} />
-      <HeadingStyledTwo>{name}</HeadingStyledTwo>
-      <TextStyledOne fontStyle="italic">{description}</TextStyledOne>
-      <div>{description}</div>
+      <HeadingStyledThree>{name}</HeadingStyledThree>
+      <TextStyledOne>Exp: {experience}</TextStyledOne>
     </TechnologieCardStyled>
   )
 }

@@ -5,7 +5,7 @@ export const PresentationSectionStyled = styled.section`
   width: 100%;
   position: relative;
 
-  & > video {
+  & > img {
     position: absolute;
     top: 0;
     height: 100%;
@@ -44,7 +44,7 @@ export const PresentationSectionStyled = styled.section`
     max-width: 520px;
   }
   & > div > .box-text > p > strong {
-    color: #4263eb;
+    color: var(--color-brand-3);
   }
 
   & > div > .box-img > img {

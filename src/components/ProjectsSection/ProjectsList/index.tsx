@@ -1,4 +1,3 @@
-import { FaArrowRight } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 import { ProjectCard } from "../ProjectsCard"
@@ -11,54 +10,43 @@ import { ProjectListStyled } from "./styles"
 export const ProjectList = () => {
   return (
     <ProjectListStyled>
-      {projectsList.map((project, index) =>
-        index % 2 === 0 ? (
-          <motion.div
-            initial={{ translateX: "-100%" }}
-            whileInView={{ translateX: 0 }}
-            exit={{ translateX: "-100%" }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            key={project.name}
-          >
-            <ProjectCard>
-              <video src={project.video} autoPlay muted loop playsInline />
+      {projectsList.map((project, index) => {
+        const indexEven = index % 2 === 0
 
-              <ContainerStyled>
-                <HeadingStyledTwo>{project.name}</HeadingStyledTwo>
-                <TextStyledOne color="--color-gray-2" fontStyle="italic">
-                  {project.description}
-                </TextStyledOne>
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  <span>ver projeto</span>
-                  <FaArrowRight />
-                </a>
-              </ContainerStyled>
-            </ProjectCard>
-          </motion.div>
-        ) : (
+        return (
           <motion.div
-            initial={{ translateX: "100%" }}
+            initial={{ translateX: indexEven ? "100%" : "-100%" }}
             whileInView={{ translateX: 0 }}
-            exit={{ translateX: "100%" }}
+            exit={{ translateX: indexEven ? "100%" : "-100%" }}
             transition={{ duration: 1, ease: "easeInOut" }}
             key={project.name}
           >
-            <ProjectCard left={true}>
-              <video src={project.video} autoPlay muted loop playsInline />
+            <ProjectCard left={indexEven}>
+              <video
+                poster="/assets/img/poster-video.webp"
+                src={project.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
               <ContainerStyled>
                 <HeadingStyledTwo>{project.name}</HeadingStyledTwo>
                 <TextStyledOne color="--color-gray-2" fontStyle="italic">
                   {project.description}
                 </TextStyledOne>
-                <a href={project.link} target="_blank" rel="noreferrer">
-                  <span>ver projeto</span>
-                  <FaArrowRight />
-                </a>
+                <div className="box-links">
+                  {project.links.map((link) => (
+                    <a key={link.ref} href={link.ref} target="_blank">
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
               </ContainerStyled>
             </ProjectCard>
           </motion.div>
         )
-      )}
+      })}
     </ProjectListStyled>
   )
 }

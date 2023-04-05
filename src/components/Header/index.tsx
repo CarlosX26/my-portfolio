@@ -32,10 +32,6 @@ export const Header = () => {
             projetos
             <div></div>
           </a>
-          <a href="#contato">
-            contato
-            <div></div>
-          </a>
         </nav>
       </ContainerStyled>
     </HeaderStyled>

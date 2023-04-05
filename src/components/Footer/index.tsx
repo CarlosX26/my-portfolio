@@ -10,7 +10,7 @@ export const Footer = () => {
       <ContainerStyled>
         <div className="box-info">
           <Image
-            src="/assets/img/profile.jpg"
+            src="/assets/img/profile.webp"
             alt="profile_img"
             width={240}
             height={240}
@@ -20,7 +20,7 @@ export const Footer = () => {
             <HeadingStyledThree>Always news things!</HeadingStyledThree>
             <div>
               <a
-                href="https://www.linkedin.com/in/carlos-junio-b02165240/"
+                href="https://www.linkedin.com/in/carlos-junio26/"
                 target="_blank"
                 rel="noreferrer"
               >
