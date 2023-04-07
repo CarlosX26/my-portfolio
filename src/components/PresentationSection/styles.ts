@@ -5,16 +5,6 @@ export const PresentationSectionStyled = styled.section`
   width: 100%;
   position: relative;
 
-  & > img {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(0.3);
-  }
-
   & > div {
     position: relative;
     z-index: 50;
@@ -30,7 +20,7 @@ export const PresentationSectionStyled = styled.section`
     gap: 32px;
   }
   & > div > .box-text > h2 {
-    letter-spacing: 4px;
+    letter-spacing: 1px;
   }
   & > div > .box-text > h1 {
     position: relative;
@@ -44,7 +34,7 @@ export const PresentationSectionStyled = styled.section`
     max-width: 520px;
   }
   & > div > .box-text > p > strong {
-    color: var(--color-brand-3);
+    color: yellowgreen;
   }
 
   & > div > .box-img > img {

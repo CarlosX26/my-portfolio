@@ -95,8 +95,6 @@ export const PresentationSection = () => {
           {chatOn && <ChatBot showChat={showChat} />}
         </AnimatePresence>
       </ContainerStyled>
-
-      <Image src="/assets/img/bg-img.gif" alt="bg-img" width={32} height={32} />
     </PresentationSectionStyled>
   )
 }
