@@ -15,13 +15,13 @@ export const ProjectList = () => {
 
         return (
           <motion.div
-            initial={{ translateX: indexEven ? "100%" : "-100%" }}
+            initial={{ translateX: indexEven ? "-100%" : "100%" }}
             whileInView={{ translateX: 0 }}
-            exit={{ translateX: indexEven ? "100%" : "-100%" }}
+            exit={{ translateX: indexEven ? "-100%" : "100%" }}
             transition={{ duration: 1, ease: "easeInOut" }}
             key={project.name}
           >
-            <ProjectCard left={indexEven}>
+            <ProjectCard left={!indexEven}>
               <video
                 poster="/assets/img/poster-video.webp"
                 src={project.video}
