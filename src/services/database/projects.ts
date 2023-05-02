@@ -3,7 +3,8 @@ import { IProjects } from "./types"
 export const projectsList: IProjects[] = [
   {
     name: "Fast Busines",
-    video: "/assets/video/fsb-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/0bmxnktb5x7ys10/fsb-demo.mp4?dl=0",
     description:
       "O Fast Busines é uma aplicação de e-commerce full stack que tem como objetivo ser uma solução simples e de fácil utilização para seus usuários.",
     links: [
@@ -16,7 +17,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "Panda Cooking",
-    video: "/assets/video/panda-cooking-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/ejnatsni2qgfc26/panda-cooking-demo.mp4?dl=0",
     description:
       "Panda Cooking, é uma comunidade onde você pode enviar suas próprias receitas, visualizar receitas, adicionar comentários e muito mais.",
     links: [
@@ -26,7 +28,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "K-Hub",
-    video: "/assets/video/k-hub-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/z98dorm3x5ta3go/k-hub-demo.mp4?dl=0",
     description:
       "K-Hub, é uma plataforma onde você pode gerenciar suas hards skills, podendo adicionar uma skill, deletar, editar e muito mais.",
     links: [
@@ -36,7 +39,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "Drop Mail",
-    video: "/assets/video/drop-mail-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/xnind5qnl18g0ik/drop-mail-demo.mp4?dl=0",
     description:
       "Esta é uma aplicação web, onde o usúario tem acesso a uma caixa de emails temporário.",
     links: [
@@ -52,7 +56,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "Spotify Clone",
-    video: "/assets/video/spotify-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/rleqcmxgujrpujd/spotify-demo.mp4?dl=0",
     description:
       "Spotify Clone, uma simples aplicação web onde o intuito é apenas mostrar o poder de estilização do tailwind css.",
     links: [
@@ -65,7 +70,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "Burguer Kenzie",
-    video: "/assets/video/kenzie-burguer-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/ec0hopxvd43ktlw/kenzie-burguer-demo.mp4?dl=0",
     description:
       "Burguer Kenzie, é uma aplicação web que simula uma lanchonete, onde você pode adicionar produtos ao carrinhos, alterar quantidade e muito mais.",
     links: [
@@ -77,7 +83,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "Nu Kenzie",
-    video: "/assets/video/nu-kenzie-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/cjzz8my95fs5i7a/nu-kenzie-demo.mp4?dl=0",
     description:
       "Nu Kenzie, é uma aplicação web que possibilita você gerenciar suas finanças de forma fácil.",
     links: [
@@ -89,7 +96,8 @@ export const projectsList: IProjects[] = [
   },
   {
     name: "Rock Paper Scissors",
-    video: "/assets/video/rock-paper-scissor-demo.mp4",
+    video:
+      "https://dl.dropboxusercontent.com/s/uimn27upojb0xaw/rock-paper-scissor-demo.mp4?dl=0",
     description:
       "Rock Paper Scissors, o famoso pedra papel tesoura, feito totalmente com JAVASCRIPT Vanila, e utilizando POO.",
     links: [
