@@ -12,7 +12,7 @@ export const TechnologieCard = ({
     <TechnologieCardStyled>
       <Image src={img} alt="skill__icon" width={96} height={96} />
       <HeadingStyledThree>{name}</HeadingStyledThree>
-      <TextStyledOne>Exp: {experience}</TextStyledOne>
+      <TextStyledOne>Experiência: {experience}</TextStyledOne>
     </TechnologieCardStyled>
   )
 }

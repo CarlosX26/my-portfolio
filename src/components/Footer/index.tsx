@@ -2,19 +2,12 @@ import { BsLinkedin, BsGithub } from "react-icons/bs"
 import { ContainerStyled } from "../../styles/container"
 import { HeadingStyledThree, HeadingStyledTwo } from "../../styles/typography"
 import { FooterStyled } from "./styles"
-import Image from "next/image"
 
 export const Footer = () => {
   return (
     <FooterStyled>
       <ContainerStyled>
         <div className="box-info">
-          <Image
-            src="/assets/img/profile.webp"
-            alt="profile_img"
-            width={240}
-            height={240}
-          />
           <div>
             <HeadingStyledTwo>Eu sou Carlos Junio</HeadingStyledTwo>
             <HeadingStyledThree>Always news things!</HeadingStyledThree>

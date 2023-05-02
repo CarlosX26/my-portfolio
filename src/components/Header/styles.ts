@@ -10,8 +10,11 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
 
+  backdrop-filter: ${({ background }: IPropsHeaderStyled) =>
+    background ? "blur(48px)" : "none"};
+
   background-color: ${({ background }: IPropsHeaderStyled) =>
-    background ? "#212529" : "none"};
+    background ? "#8080800a" : "none"};
 
   & > div {
     display: flex;

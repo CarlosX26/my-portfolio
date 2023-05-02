@@ -5,14 +5,14 @@ import { SlClose } from "react-icons/sl"
 import lottie from "lottie-web"
 
 import { ContainerStyled } from "../../styles/container"
-import { HeadingStyledTwo, TextStyledOne } from "../../styles/typography"
+import { TextStyledOne } from "../../styles/typography"
 import { PresentationSectionStyled } from "./styles"
 import { ChatBot } from "../ChatBot"
 import { useBotBrainContext } from "../../contexts/BotBrainContext"
-import Image from "next/image"
 
 export const PresentationSection = () => {
-  const refAnimation = useRef<HTMLDivElement | null>(null)
+  const refDivBot = useRef<HTMLDivElement | null>(null)
+  const refDivBg = useRef<HTMLDivElement | null>(null)
   const refAudioAlert = useRef<HTMLAudioElement | null>(null)
   const [chatOn, setChatOn] = useState(false)
   const { startConversation, setStartConversation } = useBotBrainContext()
@@ -23,16 +23,24 @@ export const PresentationSection = () => {
 
   useEffect(() => {
     lottie.loadAnimation({
-      container: refAnimation.current!,
+      container: refDivBot.current!,
       renderer: "svg",
       loop: true,
       autoplay: true,
       animationData: require("/public/assets/76723-robot-wave.json"),
     })
 
+    lottie.loadAnimation({
+      container: refDivBg.current!,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("/public/assets/141822-background-square-animation.json"),
+    })
+
     setTimeout(async () => {
       setStartConversation(true)
-      await refAudioAlert.current?.play()
+      // await refAudioAlert.current?.play()
     }, 5000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -40,25 +48,15 @@ export const PresentationSection = () => {
   return (
     <PresentationSectionStyled>
       <ContainerStyled>
-        <div className="box-text">
-          <HeadingStyledTwo>Desenvolvedor Web Full Stack</HeadingStyledTwo>
-          <h1>Carlos Junio</h1>
+        <div className="box-info">
+          <div>
+            <h1>Olá, eu sou Carlos</h1>
 
-          <TextStyledOne fontStyle="italic" color="--color-gray-2">
-            Olá seja bem vindo, eu sou o Carlos, tenho 21 anos, estou me
-            formando em Desenvolvimento <strong>Web Full Stack</strong> pela{" "}
-            <strong>Kenzie Academy Brasil</strong>, e estou sempre buscando
-            novos desafios.
-          </TextStyledOne>
-        </div>
+            <h2>Desenvolvedor Web Full Stack</h2>
+          </div>
 
-        <div className="box-img">
-          <Image
-            src="/assets/img/profile.webp"
-            alt="profile__img"
-            width={240}
-            height={240}
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element*/}
+          <img src="/assets/img/profile.webp" alt="image profile" />
         </div>
 
         <a className="box-scroll-icon" href="#tecnologias">
@@ -72,7 +70,7 @@ export const PresentationSection = () => {
         </a>
 
         <div id="robot" onClick={showChat}>
-          <div ref={refAnimation}></div>
+          <div ref={refDivBot}></div>
 
           {startConversation && (
             <div>
@@ -94,6 +92,8 @@ export const PresentationSection = () => {
         <AnimatePresence>
           {chatOn && <ChatBot showChat={showChat} />}
         </AnimatePresence>
+
+        <div id="background" ref={refDivBg}></div>
       </ContainerStyled>
     </PresentationSectionStyled>
   )
