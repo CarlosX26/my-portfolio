@@ -24,8 +24,8 @@ export const PresentationSectionStyled = styled.section`
 
     & > img {
       object-fit: cover;
-      width: 320px;
-      height: 320px;
+      width: 280px;
+      height: 280px;
       border-radius: 8px;
     }
   }
@@ -116,5 +116,25 @@ export const PresentationSectionStyled = styled.section`
     width: 100%;
     height: 100%;
     z-index: -101;
+  }
+
+  @media (max-width: 1020px) {
+    .box-info {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .box-info {
+      & > div > h1 {
+        font-size: 32px;
+      }
+      & > div > h2 {
+        font-size: 16px;
+      }
+    }
   }
 `

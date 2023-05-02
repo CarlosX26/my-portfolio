@@ -40,7 +40,7 @@ export const PresentationSection = () => {
 
     setTimeout(async () => {
       setStartConversation(true)
-      // await refAudioAlert.current?.play()
+      await refAudioAlert.current?.play()
     }, 5000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
