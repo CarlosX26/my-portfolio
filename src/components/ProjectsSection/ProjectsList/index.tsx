@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import { MediaOutlet, MediaPlayer } from "@vidstack/react"
 
 import { ProjectCard } from "../ProjectsCard"
 import { projectsList } from "../../../services/database/projects"
@@ -6,6 +7,8 @@ import { projectsList } from "../../../services/database/projects"
 import { ContainerStyled } from "../../../styles/container"
 import { HeadingStyledTwo, TextStyledOne } from "../../../styles/typography"
 import { ProjectListStyled } from "./styles"
+
+import "vidstack/styles/defaults.css"
 
 export const ProjectList = () => {
   return (
@@ -21,15 +24,19 @@ export const ProjectList = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             key={project.name}
           >
-            <ProjectCard left={!indexEven}>
-              <video
+            <ProjectCard>
+              <MediaPlayer
                 poster="/assets/img/poster-video.webp"
                 src={project.video}
-                autoPlay
+                autoplay
                 muted
                 loop
-                playsInline
-              />
+                playsinline
+                load="visible"
+              >
+                <MediaOutlet />
+              </MediaPlayer>
+
               <ContainerStyled>
                 <HeadingStyledTwo>{project.name}</HeadingStyledTwo>
                 <TextStyledOne color="--color-gray-2" fontStyle="italic">
