@@ -6,11 +6,10 @@ import { HeadingStyledOne } from "../../styles/typography"
 import { technologiesList } from "../../services/database/technologies"
 
 import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Mousewheel, Pagination } from "swiper"
+import { EffectCoverflow, Mousewheel } from "swiper"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
-import "swiper/css/pagination"
 
 export const TechnologiesSection = () => {
   return (
@@ -22,7 +21,19 @@ export const TechnologiesSection = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            slidesPerView={"auto"}
+            slidesPerView={1}
+            spaceBetween={20}
+            breakpoints={{
+              450: {
+                slidesPerView: 2,
+              },
+              800: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 5,
+              },
+            }}
             mousewheel={true}
             coverflowEffect={{
               rotate: 50,
@@ -31,9 +42,7 @@ export const TechnologiesSection = () => {
               modifier: 1,
               slideShadows: true,
             }}
-            pagination={true}
-            modules={[EffectCoverflow, Mousewheel, Pagination]}
-            className="mySwiper"
+            modules={[EffectCoverflow, Mousewheel]}
           >
             {technologiesList.map(({ name, img, experience }) => (
               <SwiperSlide key={name}>
