@@ -22,10 +22,18 @@ export const PresentationSectionStyled = styled.section`
       font-weight: 700;
     }
 
-    & > img {
+    & > .picture-frame {
+      rotate: 355deg;
+      background-color: var(--color-gray-1);
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 5px 5px 3px var(--color-gray-3);
+    }
+
+    & > .picture-frame > img {
       object-fit: cover;
-      width: 280px;
-      height: 280px;
+      width: 240px;
+      height: 240px;
       border-radius: 8px;
     }
   }
@@ -123,7 +131,7 @@ export const PresentationSectionStyled = styled.section`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 16px;
+      gap: 32px;
     }
   }
 
@@ -134,6 +142,10 @@ export const PresentationSectionStyled = styled.section`
       }
       & > div > h2 {
         font-size: 16px;
+      }
+      & > .picture-frame > img {
+        width: 196px;
+        height: 196px;
       }
     }
   }

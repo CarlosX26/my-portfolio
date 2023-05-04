@@ -9,6 +9,7 @@ import { TextStyledOne } from "../../styles/typography"
 import { PresentationSectionStyled } from "./styles"
 import { ChatBot } from "../ChatBot"
 import { useBotBrainContext } from "../../contexts/BotBrainContext"
+import Image from "next/image"
 
 export const PresentationSection = () => {
   const refDivBot = useRef<HTMLDivElement | null>(null)
@@ -55,8 +56,18 @@ export const PresentationSection = () => {
             <h2>Desenvolvedor Web Full Stack</h2>
           </div>
 
-          {/* eslint-disable-next-line @next/next/no-img-element*/}
-          <img src="/assets/img/profile.webp" alt="image profile" />
+          <motion.div
+            animate={{ rotate: [0, 5, -5] }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="picture-frame"
+          >
+            <Image
+              src="/assets/img/profile.webp"
+              alt="image profile"
+              width={240}
+              height={240}
+            />
+          </motion.div>
         </div>
 
         <a className="box-scroll-icon" href="#tecnologias">
