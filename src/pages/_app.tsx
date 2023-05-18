@@ -1,5 +1,5 @@
-import { BotBrainContextProvider } from "@/contexts/BotBrainContext"
 import GlobalStyles from "@/styles/GlobalStyles"
+import { BotBrainContextProvider } from "@/contexts/BotBrainContext"
 import { ChakraProvider } from "@chakra-ui/react"
 import type { AppProps } from "next/app"
 import { Toaster } from "react-hot-toast"
