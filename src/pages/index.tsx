@@ -1,9 +1,15 @@
 import { Header } from "../components/Header"
-import { PresentationSection } from "../components/PresentationSection"
-import { TechnologiesSection } from "../components/TechnologiesSection"
-import { ProjectsSection } from "../components/ProjectsSection"
 import { Footer } from "../components/Footer"
+import dynamic from "next/dynamic"
 import Head from "next/head"
+
+const PresentationSection = dynamic(
+  () => import("../components/PresentationSection")
+)
+const ProjectsSection = dynamic(() => import("../components/ProjectsSection"))
+const TechnologiesSection = dynamic(
+  () => import("../components/TechnologiesSection")
+)
 
 const Home = () => {
   return (
