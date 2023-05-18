@@ -11,7 +11,7 @@ import { ChatBot } from "../ChatBot"
 import { useBotBrainContext } from "../../contexts/BotBrainContext"
 import Image from "next/image"
 
-export const PresentationSection = () => {
+const PresentationSection = () => {
   const refDivBot = useRef<HTMLDivElement | null>(null)
   const refDivBg = useRef<HTMLDivElement | null>(null)
   const refAudioAlert = useRef<HTMLAudioElement | null>(null)
@@ -56,18 +56,14 @@ export const PresentationSection = () => {
             <h2>Desenvolvedor Web Full Stack</h2>
           </div>
 
-          <motion.div
-            animate={{ rotate: [0, 5, -5] }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="picture-frame"
-          >
+          <div className="picture-frame">
             <Image
               src="/assets/img/profile.webp"
               alt="image profile"
               width={240}
               height={240}
             />
-          </motion.div>
+          </div>
         </div>
 
         <a className="box-scroll-icon" href="#tecnologias">
@@ -109,3 +105,5 @@ export const PresentationSection = () => {
     </PresentationSectionStyled>
   )
 }
+
+export default PresentationSection
