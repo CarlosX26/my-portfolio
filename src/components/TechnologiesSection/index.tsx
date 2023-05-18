@@ -11,7 +11,7 @@ import { EffectCoverflow, Mousewheel } from "swiper"
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 
-export const TechnologiesSection = () => {
+const TechnologiesSection = () => {
   return (
     <TechnologiesSectionStyled>
       <ContainerStyled>
@@ -59,3 +59,5 @@ export const TechnologiesSection = () => {
     </TechnologiesSectionStyled>
   )
 }
+
+export default TechnologiesSection
