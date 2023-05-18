@@ -3,7 +3,7 @@ import { HeadingStyledOne } from "../../styles/typography"
 import { ProjectList } from "./ProjectsList"
 import { ProjectsSectionStyled } from "./styles"
 
-export const ProjectsSection = () => {
+const ProjectsSection = () => {
   return (
     <ProjectsSectionStyled>
       <ContainerStyled>
@@ -14,3 +14,5 @@ export const ProjectsSection = () => {
     </ProjectsSectionStyled>
   )
 }
+
+export default ProjectsSection
