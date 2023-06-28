@@ -54,6 +54,13 @@ const PresentationSection = () => {
             <h1>Olá, eu sou Carlos</h1>
 
             <h2>Desenvolvedor Web Full Stack</h2>
+
+            <TextStyledOne>
+              Recentemente, concluí meu curso na Kenzie Academy Brasil e estou
+              ansioso para encontrar minha primeira oportunidade profissional,
+              onde poderei demonstrar todo o meu potencial. Tenho plena
+              confiança em minha capacidade de construir coisas incríveis!
+            </TextStyledOne>
           </div>
 
           <div className="picture-frame">

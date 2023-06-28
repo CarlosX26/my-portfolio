@@ -22,6 +22,11 @@ export const PresentationSectionStyled = styled.section`
       font-weight: 700;
     }
 
+    & > div > p {
+      max-width: 664px;
+      letter-spacing: 1px;
+    }
+
     & > .picture-frame {
       rotate: 355deg;
       background-color: var(--color-gray-1);
