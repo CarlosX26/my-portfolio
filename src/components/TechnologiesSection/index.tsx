@@ -44,13 +44,9 @@ const TechnologiesSection = () => {
             }}
             modules={[EffectCoverflow, Mousewheel]}
           >
-            {technologiesList.map(({ name, img, experience }) => (
+            {technologiesList.map(({ name, img }) => (
               <SwiperSlide key={name}>
-                <TechnologieCard
-                  name={name}
-                  img={img}
-                  experience={experience}
-                />
+                <TechnologieCard name={name} img={img} />
               </SwiperSlide>
             ))}
           </Swiper>

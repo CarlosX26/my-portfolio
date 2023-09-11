@@ -1,7 +1,6 @@
 export interface ITechnologies {
   name: string
   img: string
-  experience: string
 }
 export interface IProjects {
   name: string

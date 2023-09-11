@@ -13,8 +13,6 @@ import Image from "next/image"
 
 const PresentationSection = () => {
   const refDivBot = useRef<HTMLDivElement | null>(null)
-  const refDivBg = useRef<HTMLDivElement | null>(null)
-  const refAudioAlert = useRef<HTMLAudioElement | null>(null)
   const [chatOn, setChatOn] = useState(false)
   const { startConversation, setStartConversation } = useBotBrainContext()
 
@@ -31,18 +29,6 @@ const PresentationSection = () => {
       animationData: require("/public/assets/76723-robot-wave.json"),
     })
 
-    lottie.loadAnimation({
-      container: refDivBg.current!,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("/public/assets/141822-background-square-animation.json"),
-    })
-
-    setTimeout(async () => {
-      setStartConversation(true)
-      await refAudioAlert.current?.play()
-    }, 5000)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -98,7 +84,6 @@ const PresentationSection = () => {
               </button>
               <p>Olá, vamos conversar?</p>
               <span></span>
-              <audio src="/assets/audio/viber.mp3" ref={refAudioAlert}></audio>
             </div>
           )}
         </div>
@@ -106,8 +91,6 @@ const PresentationSection = () => {
         <AnimatePresence>
           {chatOn && <ChatBot showChat={showChat} />}
         </AnimatePresence>
-
-        <div id="background" ref={refDivBg}></div>
       </ContainerStyled>
     </PresentationSectionStyled>
   )

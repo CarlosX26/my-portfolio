@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <FooterStyled>
       <ContainerStyled>
-        <HeadingStyledThree>Always news things!</HeadingStyledThree>
+        <HeadingStyledThree>Always learning news things!</HeadingStyledThree>
 
         <div>
           <a
