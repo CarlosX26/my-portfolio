@@ -12,18 +12,12 @@ export const BotBrainContextProvider = ({
   const botData = [
     {
       img: botImg,
-      message: "Olá eu sou o Jarvis.",
+      message: "Olá eu sou o Jarvis. \nAssistente virtual do Carlos.",
       from: "Jarvis",
       type: "default",
     },
     {
-      message: "Assistente virtual do Carlos.",
-      from: "Jarvis",
-      type: "default",
-    },
-    {
-      message:
-        "Eu posso te ajudar com informações sobre contato, currículo e redes sociais referentes ao Carlos.",
+      message: "Comandos disponíveis:\n - Currículo\n - GitHub\n - Linkedin",
       from: "Jarvis",
       type: "default",
     },
@@ -124,10 +118,11 @@ export const BotBrainContextProvider = ({
       message.toLocaleLowerCase().match(/currículo/g)
     ) {
       const responseJarvis = generateMessage(
-        "Funcionalidade em desenvolvimento ;)",
+        "Aqui está o currículo do Carlos",
         "Jarvis",
-        "default",
-        botImg
+        "link",
+        botImg,
+        "/assets/pdf/cvcarlosjrfullstack.pdf"
       )
       setTimeout(() => {
         setMessages([...messages, userMessage, responseJarvis])

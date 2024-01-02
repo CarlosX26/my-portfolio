@@ -9,6 +9,7 @@ export const ChatBubbleStyled = styled.div<IPropsChatBubbleStyled>`
 
   & > p,
   & > a {
+    white-space: break-spaces;
     min-height: 32px;
     width: 240px;
     background: var(

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
-import { CgArrowLongDown } from "react-icons/cg"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import { SlClose } from "react-icons/sl"
 
 import { ContainerStyled } from "../../styles/container"
@@ -21,7 +20,12 @@ const PresentationSection = () => {
     setChatOn((prevState) => !prevState)
   }
 
-  // useEffect(() => {}, [])
+  useEffect(() => {
+    setTimeout(() => {
+      setStartConversation(true)
+    }, 3000)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <PresentationSectionStyled>
@@ -36,8 +40,13 @@ const PresentationSection = () => {
               Proficiente em desenvolvimento web e mobile, com sólido domínio
               das linguagens HTML, CSS, JavaScript, TypeScript e Java.
               Experiência comprovada na criação de projetos bem-sucedidos
-              utilizando React, React Native, Node, Express, Java e Spring Boot,
-              além de integração com banco de dados PostgreSQL.
+              utilizando React, React Native, Node, Express e Spring Boot, além
+              de integração com banco de dados PostgreSQL. Conhecimento em
+              orquestração de contêineres, destacando-se na utilização de Docker
+              para aprimorar o processo de desenvolvimento e implantação.
+              Atualmente, estou cursando engenharia da computação no IFMA,
+              complementando minha formação acadêmica para aprimorar ainda mais
+              minhas habilidades na área de tecnologia.
             </TextStyledOne>
           </div>
 

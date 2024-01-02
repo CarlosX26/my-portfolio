@@ -9,6 +9,7 @@ export const ChatBotStyled = styled(motion.div)`
   height: 400px;
   display: flex;
   flex-direction: column;
+  z-index: 102;
 
   border-radius: 16px 16px 0 0;
   background: var(--color-gray-2);

@@ -3,9 +3,10 @@ import styled from "styled-components"
 export const PresentationSectionStyled = styled.section`
   background: var(--color-brand-2);
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding-top: 72px;
+  padding-bottom: 16px;
   display: flex;
 
   & > div {
@@ -64,6 +65,7 @@ export const PresentationSectionStyled = styled.section`
     width: 128px;
     height: 128px;
     cursor: pointer;
+    z-index: 101;
   }
 
   #robot > div ~ div {
