@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { ITextStyledProps } from "./types/types"
 
-const HeadingStyledOne = styled.h1`
+const HeadingStyledOne = styled.h1<ITextStyledProps>`
   font-size: var(--heading-1);
   font-weight: 700;
   color: var(--color-heading);

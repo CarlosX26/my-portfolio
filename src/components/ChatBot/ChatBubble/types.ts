@@ -9,4 +9,5 @@ export interface IPropsChatBubble {
 export interface IPropsChatBubbleStyled {
   from: string
   type: string
+  children?: React.ReactNode
 }
