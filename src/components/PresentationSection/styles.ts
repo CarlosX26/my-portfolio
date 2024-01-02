@@ -3,13 +3,37 @@ import styled from "styled-components"
 export const PresentationSectionStyled = styled.section`
   background: var(--color-brand-2);
   width: 100%;
+  height: 100vh;
   position: relative;
+  padding-top: 72px;
+  display: flex;
 
-  .box-info {
-    width: 100%;
-    height: 100%;
+  /* 
+  & > div {
+    position: relative;
+    z-index: 50;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  } */
+
+  & > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  & > div > .box-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
     & > div > h1 {
       color: var(--color-heading);
@@ -28,7 +52,8 @@ export const PresentationSectionStyled = styled.section`
     }
 
     & > .picture-frame {
-      rotate: 355deg;
+      width: 240px;
+      height: 240px;
       background-color: var(--color-gray-1);
       padding: 16px;
       border-radius: 256px;
@@ -37,19 +62,8 @@ export const PresentationSectionStyled = styled.section`
 
     & > .picture-frame > img {
       object-fit: cover;
-      width: 240px;
-      height: 240px;
       border-radius: 8px;
     }
-  }
-
-  & > div {
-    position: relative;
-    z-index: 50;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   & > div > .box-scroll-icon {
@@ -131,26 +145,37 @@ export const PresentationSectionStyled = styled.section`
     z-index: -101;
   }
 
-  @media (max-width: 1020px) {
+  @media (max-width: 1050px) {
     .box-info {
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      gap: 32px;
+
+      & > .picture-frame {
+        margin-top: 32px;
+      }
     }
   }
 
   @media (max-width: 640px) {
-    .box-info {
+    & > div > .box-info {
       & > div > h1 {
-        font-size: 32px;
+        font-size: 40px;
       }
       & > div > h2 {
         font-size: 16px;
       }
+
+      & > .picture-frame,
       & > .picture-frame > img {
-        width: 196px;
-        height: 196px;
+        width: 168px;
+        height: 168px;
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    & > div > .box-info {
+      & > div > h1 {
+        font-size: 24px;
       }
     }
   }
