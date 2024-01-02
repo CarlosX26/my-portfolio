@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { IPropsHeaderStyled } from "./types"
 
-export const HeaderStyled = styled.header`
+export const HeaderStyled = styled.header<IPropsHeaderStyled>`
   position: fixed;
   inset: 0;
   z-index: 101;
@@ -10,11 +10,9 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
 
-  backdrop-filter: ${({ background }: IPropsHeaderStyled) =>
-    background ? "blur(48px)" : "none"};
+  backdrop-filter: ${({ background }) => (background ? "blur(48px)" : "none")};
 
-  background-color: ${({ background }: IPropsHeaderStyled) =>
-    background ? "#8080800a" : "none"};
+  background-color: ${({ background }) => (background ? "#8080800a" : "none")};
 
   & > div {
     display: flex;

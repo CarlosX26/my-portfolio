@@ -30,14 +30,6 @@ export const technologiesList: ITechnologies[] = [
     img: "/assets/img/icons8-angularjs.svg",
   },
   {
-    name: "TAILWIND CSS",
-    img: "/assets/img/icon-tailwindcss.svg",
-  },
-  {
-    name: "STYLED COMPONENTS",
-    img: "/assets/img/icon-styled.svg",
-  },
-  {
     name: "FIGMA",
     img: "/assets/img/icons8-figma.svg",
   },
@@ -76,5 +68,13 @@ export const technologiesList: ITechnologies[] = [
   {
     name: "DJANGO",
     img: "/assets/img/icons8-django.svg",
+  },
+  {
+    name: "JAVA",
+    img: "/assets/img/icons8-logo-java.svg",
+  },
+  {
+    name: "SPRING BOOT",
+    img: "/assets/img/icons8-logotipo-spring.svg",
   },
 ]

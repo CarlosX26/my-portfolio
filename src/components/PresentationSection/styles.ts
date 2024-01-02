@@ -31,7 +31,7 @@ export const PresentationSectionStyled = styled.section`
       rotate: 355deg;
       background-color: var(--color-gray-1);
       padding: 16px;
-      border-radius: 8px;
+      border-radius: 256px;
       box-shadow: 5px 5px 3px var(--color-gray-3);
     }
 

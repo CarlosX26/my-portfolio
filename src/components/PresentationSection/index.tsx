@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { CgArrowLongDown } from "react-icons/cg"
 import { AnimatePresence, motion } from "framer-motion"
 import { SlClose } from "react-icons/sl"
-import lottie from "lottie-web"
 
 import { ContainerStyled } from "../../styles/container"
 import { TextStyledOne } from "../../styles/typography"
@@ -10,9 +9,11 @@ import { PresentationSectionStyled } from "./styles"
 import { ChatBot } from "../ChatBot"
 import { useBotBrainContext } from "../../contexts/BotBrainContext"
 import Image from "next/image"
+import lottieJson from "../../../public/assets/76723-robot-wave.json"
+import dynamic from "next/dynamic"
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false })
 
 const PresentationSection = () => {
-  const refDivBot = useRef<HTMLDivElement | null>(null)
   const [chatOn, setChatOn] = useState(false)
   const { startConversation, setStartConversation } = useBotBrainContext()
 
@@ -20,17 +21,7 @@ const PresentationSection = () => {
     setChatOn((prevState) => !prevState)
   }
 
-  useEffect(() => {
-    lottie.loadAnimation({
-      container: refDivBot.current!,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: require("/public/assets/76723-robot-wave.json"),
-    })
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  // useEffect(() => {}, [])
 
   return (
     <PresentationSectionStyled>
@@ -42,16 +33,17 @@ const PresentationSection = () => {
             <h2>Desenvolvedor Web Full Stack</h2>
 
             <TextStyledOne>
-              Recentemente, concluí meu curso na Kenzie Academy Brasil e estou
-              ansioso para encontrar minha primeira oportunidade profissional,
-              onde poderei demonstrar todo o meu potencial. Tenho plena
-              confiança em minha capacidade de construir coisas incríveis!
+              Proficiente em desenvolvimento web e mobile, com sólido domínio
+              das linguagens HTML, CSS, JavaScript, TypeScript e Java.
+              Experiência comprovada na criação de projetos bem-sucedidos
+              utilizando React, React Native, Node, Express, Java e Spring Boot,
+              além de integração com banco de dados PostgreSQL.
             </TextStyledOne>
           </div>
 
           <div className="picture-frame">
             <Image
-              src="/assets/img/profile.webp"
+              src="/assets/img/profile.png"
               alt="image profile"
               width={240}
               height={240}
@@ -70,7 +62,12 @@ const PresentationSection = () => {
         </a>
 
         <div id="robot" onClick={showChat}>
-          <div ref={refDivBot}></div>
+          <Lottie
+            loop
+            animationData={lottieJson}
+            play
+            style={{ width: 128, height: 128 }}
+          />
 
           {startConversation && (
             <div>
