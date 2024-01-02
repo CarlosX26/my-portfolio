@@ -8,16 +8,6 @@ export const PresentationSectionStyled = styled.section`
   padding-top: 72px;
   display: flex;
 
-  /* 
-  & > div {
-    position: relative;
-    z-index: 50;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
-
   & > div {
     width: 100%;
     display: flex;
@@ -64,37 +54,6 @@ export const PresentationSectionStyled = styled.section`
       object-fit: cover;
       border-radius: 8px;
     }
-  }
-
-  & > div > .box-scroll-icon {
-    cursor: pointer;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid #999999;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-
-  & > div > .box-scroll-icon > div {
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  & > div > .box-scroll-icon > div > svg {
-    font-size: 24px;
-    color: var(--color-gray-1);
-  }
-  & > div > .box-scroll-icon > p {
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   #robot {
@@ -147,11 +106,11 @@ export const PresentationSectionStyled = styled.section`
 
   @media (max-width: 1050px) {
     .box-info {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
 
       & > .picture-frame {
-        margin-top: 32px;
+        margin-bottom: 32px;
       }
     }
   }
@@ -167,8 +126,8 @@ export const PresentationSectionStyled = styled.section`
 
       & > .picture-frame,
       & > .picture-frame > img {
-        width: 168px;
-        height: 168px;
+        width: 192px;
+        height: 192px;
       }
     }
   }

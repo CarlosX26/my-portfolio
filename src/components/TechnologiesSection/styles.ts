@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const TechnologiesSectionStyled = styled.section`
   background-color: var(--color-brand-2);
+  padding-bottom: 16px;
 
   & > div {
     display: flex;

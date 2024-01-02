@@ -51,16 +51,6 @@ const PresentationSection = () => {
           </div>
         </div>
 
-        <a className="box-scroll-icon" href="#tecnologias">
-          <motion.div
-            whileHover={{ top: 4 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <CgArrowLongDown />
-          </motion.div>
-          <TextStyledOne>Scroll</TextStyledOne>
-        </a>
-
         <div id="robot" onClick={showChat}>
           <Lottie
             loop
